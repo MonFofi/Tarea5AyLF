@@ -1,0 +1,51 @@
+\documentclass{article}
+
+%Paquetes
+\PassOptionsToPackage{table,dvipsnames,x11names}{xcolor}
+\usepackage[spanish]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage[most]{tcolorbox}
+\usetikzlibrary{calc,positioning,matrix}
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{textcomp} 
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{twemojis}
+\usepackage{logix}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{float}
+
+\tcbset{
+  colback=green!10!white,
+  colframe=DarkSeaGreen1!60!black,
+  fonttitle=\bfseries,
+  arc=3.5pt,
+  boxrule=1pt,
+}
+\newtcolorbox{caja}[1]{title={#1}}
+
+
+%Documento
+\begin{document}
+	\newgeometry{left=1.8cm, right=1.8cm, top=2.8cm, bottom=2.4cm}
+	\pagestyle{fancy}
+	\fancyhead[RO,L]{\textbf{\makebox[\textwidth][r]{\ensuremath{\OutlineCurvedDiamond}Tarea 5\ensuremath{\LoopArrowRight}Monroy Flores Alexa Sofia}}}
+    \begin{caja}{Ejercicio}
+      Sea $U=\{(M, w)|M\text{ es una M.T. que acepta }w\}$. Demostrar, sin citar teorema, que $U$ es Turing-incomputable. 
+      Además, demuestra que $U$ es Turing-reconocible.
+    \end{caja}
+			P.D. $U$ es Turing-incomputable y Turing-reconocible.\\
+			Para probar que $U$ es Turing-incomputable, hagámoslo por contradicción. Por lo que supongamos que $U$ es Turing-computable.\\
+      Es decir, digamos que hay una máquina de Turing $T$ que se detiene para cada $(M,w)$ entrada ya sea que esta sea aceptada o sea rechazada.\\
+
+  \restoregeometry
+\end{document}
